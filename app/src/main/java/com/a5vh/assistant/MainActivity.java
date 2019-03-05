@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
 
-        loadFragment(new GoalsFragment());
+        loadFragment(new HomeFragment());
     }
 
     private boolean loadFragment(Fragment fragment) {
@@ -48,6 +48,12 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
             case R.id.navigation_routes:
                 fragment = new RoutesFragment();
+                break;
+
+            case R.id.navigation_home:
+                fragment = new HomeFragment();
+                HomeFragment homeFragment = (HomeFragment)getSupportFragmentManager()
+                        .findFragmentById(R.id.navigation_home);
                 break;
         }
 
