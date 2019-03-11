@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "761858106101",
+    "firebase_url": "https://asisstant-e58cf.firebaseio.com",
+    "project_id": "asisstant-e58cf",
+    "storage_bucket": "asisstant-e58cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761858106101:android:67167045fb5e8691",
+        "android_client_info": {
+          "package_name": "com.a5vh.assistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761858106101-r99k7ehc4ck3e16mv93b21ot082ecimp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgFlBugmIhwauugoxVLoMC0M3EZjrPMhw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
