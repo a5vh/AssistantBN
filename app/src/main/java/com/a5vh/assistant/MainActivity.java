@@ -1,5 +1,7 @@
 package com.a5vh.assistant;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -25,13 +27,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
 
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .requestProfile()
-                .build();
-
-        GoogleSignInClient gsc = GoogleSignIn.getClient(this, gso);
-
+        AccountManager manager = (AccountManager) getSystemService(ACCOUNT_SERVICE);
+        Account[] list = manager.getAccounts();
+        String gmail = null;
 
         loadFragment(new HomeFragment());
     }
@@ -73,13 +71,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 fragment = new HomeFragment();
                 HomeFragment homeFragment = (HomeFragment)getSupportFragmentManager()
                         .findFragmentById(R.id.navigation_home);
-
-                GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
-                String personGivenName = acct.getGivenName();
-
-                TextView nameText = findViewById(R.id.nameBox);
-                nameText.setText("Hello, " + personGivenName);
-
                 break;
         }
 
