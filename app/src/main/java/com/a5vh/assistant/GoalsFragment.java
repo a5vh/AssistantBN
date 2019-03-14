@@ -1,5 +1,7 @@
 package com.a5vh.assistant;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
