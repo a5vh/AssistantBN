@@ -12,9 +12,12 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
     <ListView
-        android:id="@+id/route"
-        android:layout_width="wrap_content"
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/home_work"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:entries="@array/routes" >
+    </ListView>
 
 </RelativeLayout>

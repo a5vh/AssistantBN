@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="routes">
+        <item > Home to Work</item>
+        <item > Work to Home</item>
+        <item > Work to Church</item>
+        <item > Jills to Home</item>
+        <item > Home to Jills</item>
+        <item > Work to Jills</item>
+    </string-array>
+</resources>
