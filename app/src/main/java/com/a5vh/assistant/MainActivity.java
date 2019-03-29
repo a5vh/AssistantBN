@@ -29,8 +29,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_main);
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
-        ListView listView = (ListView) findViewById(R.id.listView1);
-        listView.setOnItemClickListener(this);
     }
 
     public void onItemClick(AdapterView<?> l, View v, int position, long id) {
