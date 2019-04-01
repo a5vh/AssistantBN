@@ -17,11 +17,11 @@ import android.widget.ListView;
 public class RoutesFragment extends ListFragment implements AdapterView.OnItemClickListener {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return super.onCreateView(inflater, container, savedInstanceState);
+        View view = inflater.inflate(R.layout.fragment_routes, container, false);
 
-        ListView listView = getListView();
-        listView.setOnItemClickListener(this);
+        ListView listView = view.findViewById(R.id.mylistviewhello);
     }
 
     public void onItemClick(AdapterView<?> l, View v, int position, long id) {
