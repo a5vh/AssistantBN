@@ -14,24 +14,14 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-public class RoutesFragment extends ListFragment implements AdapterView.OnItemClickListener {
+public class RoutesFragment extends ListFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(R.layout.fragment_routes, container, false);
+        View helloView;
+        helloView = inflater.inflate(R.layout.fragment_routes, container, false);
 
-        ListView listView = view.findViewById(R.id.mylistviewhello);
-    }
-
-    public void onItemClick(AdapterView<?> l, View v, int position, long id) {
-        Log.i("HelloListView", "You clicked Item: " + id + " at position:" + position);
-        // Then you start a new Activity via Intent
-        Intent intent = new Intent();
-        intent.setClass(this.getContext(), ListItemDetail.class);
-        intent.putExtra("position", position);
-        // Or / And
-        intent.putExtra("id", id);
-        startActivity(intent);
+        ListView listView = helloView.findViewById(R.id.mylistviewhello);
+        return helloView;
     }
 }

@@ -21,8 +21,7 @@ import android.widget.TextView;
 import java.util.LinkedList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemClickListener {
-
+public class MainActivity extends AppCompatActivity {
 
     final Fragment fragment1 = new HomeFragment();
     final Fragment fragment2 = new GoalsFragment();
@@ -68,13 +67,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
     };
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-
 
     public void onItemClick(AdapterView<?> l, View v, int position, long id) {
         Log.i("HelloListView", "You clicked Item: " + id + " at position:" + position);
@@ -85,10 +77,5 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         // Or / And
         intent.putExtra("id", id);
         startActivity(intent);
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
     }
 }
